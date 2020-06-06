@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MyShop.Core.Models
 {
-    class Product
+    public class Product
     {
         public string Id { get; set; }
         [StringLength(20)]
