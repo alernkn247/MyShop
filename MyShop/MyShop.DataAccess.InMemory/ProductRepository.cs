@@ -23,7 +23,7 @@ namespace MyShop.DataAccess.InMemory
         }
         public void Commit()
         {
-            cache["products"] = products;
+                cache["products"] = products;
         }
 
         public void Insert(Product p)
@@ -60,12 +60,12 @@ namespace MyShop.DataAccess.InMemory
         }
 
 
-        public void Delete(Product product)
+        public void Delete(string Id)
         {
-            Product productToDelete = products.Find(p => p.Id == product.Id);
+            Product productToDelete = products.Find(p => p.Id == Id);
             if (productToDelete != null)
             {
-                products.Remove(product);
+                products.Remove(productToDelete);
             }
             else
             {
