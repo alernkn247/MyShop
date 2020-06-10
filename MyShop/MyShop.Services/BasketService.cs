@@ -84,7 +84,7 @@ namespace MyShop.Services
             }
             else
             {
-                item.Quantity = item.Quantity = 1;
+                item.Quantity = item.Quantity + 1;
             }
 
             basketContext.Commit();
@@ -124,7 +124,7 @@ namespace MyShop.Services
                 return new List<BasketitemViewModel>();
             }
         }
-        public BasketSummaryViewModel GetBackSummay(HttpContextBase httpContext)
+        public BasketSummaryViewModel GetBasketSummary(HttpContextBase httpContext)
         {
             Basket basket = GetBasket(httpContext, false);
             BasketSummaryViewModel model = new BasketSummaryViewModel(0, 0);
