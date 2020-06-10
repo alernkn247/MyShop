@@ -9,7 +9,7 @@ namespace MyShop.Core.Models
 {
     public class Basket : BaseEntity
     {
-        public virtual ICollection<BasketItem> Basketitems { get; set; }
+        public virtual ICollection<BasketItem> Basketitems { get; set; } //Lazy Loading for entity framework, it will automatically load basket items when calling basket class
         public Basket()
         {
             this.Basketitems = new List<BasketItem>();
